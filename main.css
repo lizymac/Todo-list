@@ -1,0 +1,46 @@
+html {
+  --grey: #e7e7e7;
+  --gray: #bbbbbb;
+  --lightpurple: #a59ee4;
+  --black: #2e2e2e;
+  --red: #c73737;
+  font-size: 63%;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 2rem;
+  line-height: 1.5;
+  background-color: var(--lightpurple);
+}
+
+/* Helper Divs */
+
+button,
+input[type="button"] {
+  color: snow;
+  background: var(--lightpurple);
+  padding: 1rem;
+  border: 0;
+  margin-left: 1rem;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+button[type="submit"] {
+  outline: none;
+}
+
+:focus {
+  outline-color: var(--lightpurple);
+}
