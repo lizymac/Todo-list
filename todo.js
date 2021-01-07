@@ -1,4 +1,4 @@
-const shoppingForm = document.querySelector('.shopping');
+const todoForm = document.querySelector('.todo');
 const list = document.querySelector('.list');
 
 let items = [];
@@ -23,7 +23,7 @@ function handleSubmit(e) {
 
 function displayItems() {
   const html = items.map((item) => {
-    return `<li class='shopping-item'>
+    return `<li class='todo-item'>
             <input type='checkbox' value=${item.id} ${
       item.checked ? 'checked' : ''
     } />
@@ -53,14 +53,14 @@ function deleteItem(id) {
 }
 
 function checkedOrNot(id) {
-  console.log(id);
+  //console.log(id);
   const itemRef = items.find((item) => item.id === id);
-  console.log(itemRef);
+  //console.log(itemRef);
   itemRef.checked = !itemRef.checked;
   list.dispatchEvent(new CustomEvent('itemsUpdated'));
 }
 
-shoppingForm.addEventListener('submit', handleSubmit);
+todoForm.addEventListener('submit', handleSubmit);
 list.addEventListener('itemsUpdated', displayItems);
 list.addEventListener('itemsUpdated', saveToLocalStorage);
 
